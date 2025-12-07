@@ -416,7 +416,6 @@ public final class ForcePackPaper extends JavaPlugin implements ForcePackPlatfor
             final ConfigurationSection section = getConfig().getConfigurationSection(sectionName);
             if (section != null) {
                 getLogger().warning("Detected legacy '" + sectionName + "' action, converting your config now (consider regenerating config for comments and new settings!)...");
-                getConfig().set("Server.Actions." + status.name() + ".Commands", section.getStringList("Command"));
                 getConfig().set("Server.Actions." + status.name() + ".kick", status != PlayerResourcePackStatusEvent.Status.SUCCESSFULLY_LOADED && kick);
                 getConfig().set(sectionName, null);
                 getConfig().set("Server.kick", null);

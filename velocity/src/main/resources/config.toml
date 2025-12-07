@@ -111,22 +111,17 @@ debug = false
         # List of valid actions: https://jd.advntr.dev/api/4.15.0/net/kyori/adventure/resource/ResourcePackStatus.html
         [global-pack.actions.ACCEPTED]
             kick = false
-            commands = []
         [global-pack.actions.DECLINED]
             kick = true
             message = "<color:#FF5555>Please accept our resource pack to play on the server!"
-            commands = []
         [global-pack.actions.FAILED_DOWNLOAD]
             kick = true
             message = "<color:#FF5555>The resource pack download failed. Please try rejoining."
-            commands = []
         [global-pack.actions.FAILED_RELOAD]
             kick = true
             message = "<color:#FF5555>The resource pack reload failed. Please try rejoining."
-            commands = []
         [global-pack.actions.SUCCESSFUL]
             kick = false
-            commands = []
 
 # Defines groups of servers, rather than singular individual ones
 [groups]
@@ -151,22 +146,17 @@ debug = false
             # List of valid actions: https://jd.advntr.dev/api/4.15.0/net/kyori/adventure/resource/ResourcePackStatus.html
             [groups.example-group.actions.ACCEPTED]
                 kick = false
-                commands = []
             [groups.example-group.actions.DECLINED]
                 kick = true
                 message = "<color:#FF5555>Please accept our resource pack to play on the server!"
-                commands = []
             [groups.example-group.actions.FAILED_DOWNLOAD]
                 kick = true
                 message = "<color:#FF5555>The resource pack download failed. Please try rejoining."
-                commands = []
             [groups.example-group.actions.FAILED_RELOAD]
                 kick = true
                 message = "<color:#FF5555>The resource pack reload failed. Please try rejoining."
-                commands = []
             [groups.example-group.actions.SUCCESSFUL]
                 kick = false
-                commands = []
 
 [servers]
     # You can specify any server name here that is configured in velocity.
@@ -188,22 +178,17 @@ debug = false
             # List of valid actions: https://jd.advntr.dev/api/4.15.0/net/kyori/adventure/resource/ResourcePackStatus.html
             [servers.example-server.actions.ACCEPTED]
                 kick = false
-                commands = []
             [servers.example-server.actions.DECLINED]
                 kick = true
                 message = "<color:#FF5555>Please accept our resource pack to play on the server!"
-                commands = []
             [servers.example-server.actions.FAILED_DOWNLOAD]
                 kick = true
                 message = "<color:#FF5555>The ResourcePack download failed. Please try rejoining."
-                commands = []
             [servers.example-server.actions.FAILED_RELOAD]
                 kick = true
                 message = "<color:#FF5555>The resource pack reload failed. Please try rejoining."
-                commands = []
             [servers.example-server.actions.SUCCESSFUL]
                 kick = false
-                commands = []
         # Here you can specify a pack format version-specific resource pack.
         # Note that the "all" section above must be kept as a fallback.
         # You can do the same thing in the global resource pack and resource pack groups.

@@ -77,37 +77,22 @@ Server:
     # See https://minecraft.wiki/w/Pack_format.
 
   Actions:
-    # To disable commands, you can do Commands: []
     # List of valid actions: https://jd.advntr.dev/api/4.15.0/net/kyori/adventure/resource/ResourcePackStatus.html
     # DOWNLOADED, FAILED_RELOAD, DISCARDED only apply to 1.20.3+ clients.
     ACCEPTED:
       kick: false
-      Commands:
-        - say [player] accepted the resource pack!
     DOWNLOADED:
       kick: false
-      Commands:
-        - say [player] finished downloading the resource pack!
     SUCCESSFULLY_LOADED:
       kick: false
-      Commands:
-        - say [player] successfully loaded the resource pack!
     DECLINED:
       kick: true
-      Commands:
-        - say [player] denied the resource pack!
     FAILED_DOWNLOAD:
       kick: true
-      Commands:
-        - say [player] failed to download the resource pack!
     FAILED_RELOAD:
       kick: true
-      Commands:
-        - say [player] failed to reload the resource pack!
     DISCARDED:
       kick: true
-      Commands:
-        - say [player] discarded the resource pack!
 
   # Speed in ticks at which the ResourcePack prompt will be resent to the player (prevents escaping out)
   Update GUI Speed: 20

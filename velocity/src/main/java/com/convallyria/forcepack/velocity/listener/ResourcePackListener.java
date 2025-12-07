@@ -9,7 +9,6 @@ import com.convallyria.forcepack.velocity.ForcePackVelocity;
 import com.convallyria.forcepack.velocity.config.VelocityConfig;
 import com.convallyria.forcepack.velocity.handler.PackHandler;
 import com.convallyria.forcepack.velocity.resourcepack.VelocityResourcePack;
-import com.velocitypowered.api.command.CommandSource;
 import com.velocitypowered.api.event.PostOrder;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.connection.DisconnectEvent;
@@ -95,13 +94,6 @@ public class ResourcePackListener {
         if (tryValidateHacks(player, status, root)) return;
 
         final VelocityConfig actions = root.getConfig("actions").getConfig(status.name());
-        if (actions != null) {
-            for (String cmd : actions.getStringList("commands")) {
-                final CommandSource console = plugin.getServer().getConsoleCommandSource();
-                plugin.getServer().getCommandManager().executeAsync(console, cmd.replace("[player]", player.getUsername()));
-            }
-        }
-
         final boolean kick = actions != null && actions.getBoolean("kick");
 
         // Declined/failed is valid and should be allowed, server owner decides whether they get kicked

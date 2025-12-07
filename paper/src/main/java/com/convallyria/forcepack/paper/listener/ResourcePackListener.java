@@ -82,10 +82,6 @@ public class ResourcePackListener implements Listener {
             }
         }
 
-        for (String cmd : getConfig().getStringList("Server.Actions." + status.name() + ".Commands")) {
-            ensureMainThread(() -> Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmd.replace("[player]", player.getName())));
-        }
-
         // Don't execute kicks - handled by proxy
         if (plugin.velocityMode) {
             plugin.getScheduler().executeOnMain(() -> this.callBukkitEvent(event));
